@@ -1,0 +1,94 @@
+
+/* Nav styles */
+
+.nav-toggle {
+	text-decoration: none;
+	position: absolute;
+	left: 0.7em;
+	top: 8px;
+	z-index: 10;
+	-webkit-transition: left .5s;
+	transition: left .5s;
+}
+.nav-toggle span {
+	text-indent: -9999px;
+	display: inline-block;
+}
+.nav-toggle:before {
+	font-family: 'icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content: "\e600";
+	color: #666;
+	font-size: 20px;
+}
+.nav-toggle:hover:before {
+	color: #000;
+}
+
+.nav {
+	top: 0;
+	margin-left: 0;
+	width: 85%;
+	height: 100%;
+	background: #fffae9;
+}
+.js .nav {
+	position: absolute;
+	left: -100%;
+	-webkit-transition: left .5s;
+	transition: left .5s;
+}
+
+.js .nav-shown {
+	left: 0;
+}
+.js .nav-active {
+	left: 90%;
+}
+
+.nav p {
+	padding: 0.5em;
+	margin: 0;
+}
+.nav ul {
+	border-top: solid 1px #666;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav li {
+	border-bottom: solid 1px #666;
+	padding: 0.5em;
+}
+
+@media (min-width: 480px) {
+	.js .nav {
+		position: relative;
+		left: 0;
+		height: auto;
+		width: 100%;
+		-webkit-transition: 0;
+		transition: 0;
+	}
+	.nav-toggle {
+		display: none;
+	}
+	.nav ul {
+		border-bottom: solid 1px #666;
+		overflow: hidden;
+	}
+	.nav li {
+		float: left;
+		margin-right: 0.2em;
+		border: none;
+		border-left: solid 1px #666;
+		margin-left: -1px;
+	}
+}

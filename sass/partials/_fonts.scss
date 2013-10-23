@@ -1,0 +1,78 @@
+
+@font-face {
+	font-family: "icons";
+		src: url("fonts/icomoon.eot");
+		src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"), 
+			 url("fonts/icomoon.svg#icomoon") format("svg"), 
+			 url("fonts/icomoon.woff") format("woff"), 
+			 url("fonts/icomoon.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* Simple reset and page set up*/
+body, html {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+p {
+	padding: 0;
+	margin: 0 0 0.5em;
+}
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body {
+	font-size: 100%;
+}
+
+.wrapper {
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	height: 100%;
+}
+.header {
+	min-height: 2.5em;
+}
+@media (min-width: 480px) {	
+	.header {
+		min-height: 0;
+	}
+}
+.main {
+	width: 100%;
+	height: 94%;
+	overflow: auto;
+	position: absolute;
+	top: 2.5em;
+	padding: 0.5em;
+	-webkit-transition: left .5s;
+	transition: left .5s;
+}
+.main p {
+	margin-bottom: 800px;
+}
+.main:after {
+	content: "bottom of page";
+}
+.main.nav-open {
+	left: 85%;	
+}
+@media (min-width: 480px) {	
+	.main.nav-open {
+		left: 0;	
+	}
+	.main, .header {
+		position: relative;
+		height: auto;
+	}
+	.main {
+		top: 0;		
+	}
+}
