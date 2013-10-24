@@ -66,8 +66,10 @@ p, ul {
 @include breakpoint($breakpoint-one) {
 	.main {
 		top: 0;		
-		.nav-active {
-			left: 0;	
+		-webkit-transition: left 0;
+		transition: left 0;
+		&.nav-active {
+			left: 0;
 		}
 	}
 	.main, .header {
