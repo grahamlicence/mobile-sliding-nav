@@ -30,6 +30,9 @@
 	&:hover:before {
 		color: #000;
 	}
+	&.nav-active {
+		left: 88%;
+	}
 }
 
 .nav {
@@ -43,6 +46,9 @@
 		left: -100%;
 		-webkit-transition: left .5s;
 		transition: left .5s;
+		&.nav-active {
+			left: 0;
+		}
 	}
 	p {
 		padding: 0.5em;
@@ -55,15 +61,6 @@
 	li {
 		border-bottom: solid 1px #666;
 		padding: 0.5em;
-	}
-}
-
-.js {
-	.nav-shown {
-		left: 0;
-	}
-	.nav-active {
-		left: 88%;
 	}
 }
 

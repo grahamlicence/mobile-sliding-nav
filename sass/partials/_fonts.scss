@@ -33,7 +33,7 @@ p, ul {
 }
 
 .wrapper {
-	overflow-x: hidden;
+	overflow-x: hidden; // hide content when nudged to left or right
 	width: 100%;
 	position: relative;
 	height: 100%;
@@ -59,19 +59,19 @@ p, ul {
 	&:after {
 		content: "bottom of page";		
 	}
-	&.nav-open {
+	&.nav-active {
 		left: 85%;	
 	}
 }
 @include breakpoint($breakpoint-one) {
-	.main.nav-open {
-		left: 0;	
+	.main {
+		top: 0;		
+		.nav-active {
+			left: 0;	
+		}
 	}
 	.main, .header {
 		position: relative;
 		height: auto;
-	}
-	.main {
-		top: 0;		
 	}
 }

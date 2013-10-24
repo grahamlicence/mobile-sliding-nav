@@ -22,14 +22,14 @@
 		
 		btn.addEventListener('click', function () {
 			if (open) {
-				removeClass(nav, 'nav-shown');
+				removeClass(nav, 'nav-active');
 				removeClass(btn, 'nav-active');
-				removeClass(main, 'nav-open');
+				removeClass(main, 'nav-active');
 				open = false;
 			} else {
-				addClass(nav, 'nav-shown');
+				addClass(nav, 'nav-active');
 				addClass(btn, 'nav-active');
-				addClass(main, 'nav-open');
+				addClass(main, 'nav-active');
 				open = true;
 			}
 		}, false);
