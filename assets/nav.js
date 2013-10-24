@@ -16,6 +16,7 @@
 
 	var toggle = function () {
 		var btn = get('nav-toggle')[0],
+			header = get('header')[0],
 			main = get('main')[0],
 			nav = get('nav')[0],
 			open = false;
@@ -23,12 +24,12 @@
 		btn.addEventListener('click', function () {
 			if (open) {
 				removeClass(nav, 'nav-active');
-				removeClass(btn, 'nav-active');
+				removeClass(header, 'nav-active');
 				removeClass(main, 'nav-active');
 				open = false;
 			} else {
 				addClass(nav, 'nav-active');
-				addClass(btn, 'nav-active');
+				addClass(header, 'nav-active');
 				addClass(main, 'nav-active');
 				open = true;
 			}
