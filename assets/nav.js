@@ -16,21 +16,22 @@
 
 	var toggle = function () {
 		var btn = get('nav-toggle')[0],
-			header = get('header')[0],
+			contentSection = get('nav__content-section')[0],
+			body = document.getElementsByTagName('body')[0],
 			main = get('main')[0],
 			nav = get('nav')[0],
 			open = false;
 		
 		btn.addEventListener('click', function () {
 			if (open) {
-				removeClass(nav, 'nav-active');
-				removeClass(header, 'nav-active');
-				removeClass(main, 'nav-active');
+				removeClass(body, 'nav-active');
+				// removeClass(header, 'nav-active');
+				// removeClass(main, 'nav-active');
 				open = false;
 			} else {
-				addClass(nav, 'nav-active');
-				addClass(header, 'nav-active');
-				addClass(main, 'nav-active');
+				addClass(body, 'nav-active');
+				// addClass(header, 'nav-active');
+				// addClass(main, 'nav-active');
 				open = true;
 			}
 		}, false);

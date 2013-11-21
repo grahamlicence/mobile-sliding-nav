@@ -5,7 +5,7 @@
 	text-decoration: none;
 	position: absolute;
 	left: 0;
-	top: 8px;
+	top: 0;
 	z-index: 10;
 	padding: 0.5em;
 	display: none;
@@ -22,6 +22,8 @@
 		height: 3px;
 		background: #666;
 		position: relative;
+		top: -3px;
+		left: 2px;
 		&:before,
 		&:after {
 			content: " ";
@@ -44,6 +46,12 @@
 	}
 }
 
+@include breakpoint($breakpoint-one) {
+	.js .nav-toggle {
+		display: none;
+	}
+}
+
 // navigation
 .nav {
 	top: 0;
@@ -56,9 +64,9 @@
 		left: -100%;
 		-webkit-transition: left .5s;
 		transition: left .5s;
-		&.nav-active {
-			left: 0;
-		}
+	}
+	.nav-active & {
+		left: 0;
 	}
 	p {
 		padding: 0.5em;
@@ -108,9 +116,9 @@
 		position: relative;
 		top: 0;
 		left: 0;
-		&.nav-active {
-			left: 85%;
-		}
+	}
+	.nav-active & {
+		left: 85%;
 	}
 }
 
@@ -121,8 +129,15 @@
 		transition: left 0;
 		position: relative;
 		height: auto;
-		&.nav-active {
+		.nav-active & {
 			left: 0;
 		}
+	}
+}
+
+// navigation content
+@include breakpoint($breakpoint-one) {
+	.nav__heading {
+		display: none;
 	}
 }
