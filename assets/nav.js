@@ -19,6 +19,7 @@
 			contentSection = get('nav__content-section')[0],
 			body = document.getElementsByTagName('body')[0],
 			nav = get('nav')[0],
+			links = get('nav-list__link'),
 			navClosing = false,
 			navOpen = false;
 		
@@ -46,29 +47,15 @@
 				navOpen = true;
 			}
 		}, false);
+
+		console.log(links)
+		links[links.length - 1].addEventListener('keydown', function (e) {
+			console.log(e.keyCode)
+			if (e.keyCode === 9) {
+				e.preventDefault();
+				btn.focus();
+			}
+		})
 	};
 	return toggle();
 })();
-
-if (Barclays.mode['gte-md']) { // ideally we'd get this as dot notation, eg Barclays.mode.gte.md
-			$nav.toggleClass('nav-open');
-		} else {
-			if (navOpen) {
-				if (navClosing) {
-					// navigation is closing, do nothing until the animation has finished
-					// this stops the panel opening empty
-					return false;
-				} else {
-					navClosing = true;
-					// wait for css animation to end
-					afterClose = setTimeout(function () {
-						navClosing = false;
-						$nav.removeClass('nav-open');
-						navOpen = false;
-					}, 500);
-				}
-			} else {
-				$nav.addClass('nav-open');
-				navOpen = true;
-			}
-		}
