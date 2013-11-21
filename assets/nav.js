@@ -58,6 +58,7 @@
 			}
 		});
 
+		// disable CSS animation when resizing window/changing orientation
 		var resizing = false,
 			resizeEnd;
 		window.addEventListener('resize', function () {

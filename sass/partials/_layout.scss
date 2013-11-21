@@ -3,6 +3,11 @@
 	width: 100%;
 	position: relative;
 	height: 100%;
+	.nav-active & {
+		// prevent scrolling when navigation open
+		// might be better setting to fixed?
+		overflow: hidden;
+	}
 }
 .header {
 	min-height: 2.5em;
