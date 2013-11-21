@@ -1,6 +1,14 @@
 // Variables
 $breakpoint-one: 480px, 'no-query' true;
 
+// mixins
+@mixin transform($action) {	
+	-webkit-transform: $action;
+	-ms-transform: $action;
+	-o-transform: $action;
+	transform: $action;
+}
+
 // Simple reset and page set up
 body, html {
 	height: 100%;
