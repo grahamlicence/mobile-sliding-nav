@@ -65,6 +65,10 @@
 		-webkit-transition: left .5s;
 		transition: left .5s;
 	}
+	.window-resize & {
+		-webkit-transition: left 0;
+		transition: left 0;
+	}
 	.nav-active & {
 		left: 0;
 	}
@@ -107,6 +111,9 @@
 	.nav-list {
 		border-bottom: solid 1px #666;
 		overflow: hidden;
+		.js & {
+			visibility: visible;
+		}
 	}
 	.nav-list__item {
 		float: left;
@@ -126,6 +133,10 @@
 		position: relative;
 		top: 0;
 		left: 0;
+	}
+	.window-resize & {
+		-webkit-transition: left 0;
+		transition: left 0;
 	}
 	.nav-active & {
 		left: 85%;
