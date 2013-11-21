@@ -17,32 +17,44 @@
 </head>
 <body>
 	<div class="wrapper">
-		<div class="header">
-			<div class="main-header-content">
-				<a class="nav-toggle" href="#navigation"><span>Navigation</span></a>
-			</div>
+		<div class="header nav__content-section" role="banner">
+			<h1>Sliding navigation example</h1>
+			<a class="nav-toggle" href="#navigation">
+				<i class="nav-toggle__icon"></i>
+				<span class="nav-toggle__text">Navigation</span>
+			</a>
 		</div>
 		
-		<div id="navigation" class="nav" role="navigation">
-			<p>Navigation list</p>
-			<ul>
-				<li>
+		<nav id="navigation" class="nav" role="navigation">
+			<h2>Navigation heading</h2>
+			<ul class="nav-list">
+				<li class="nav-list__item">
 					<a href="#">Nav item</a>
 				</li>
-				<li>
+				<li class="nav-list__item">
 					<a href="#">Nav item</a>
 				</li>
-				<li>
+				<li class="nav-list__item">
 					<a href="#">Nav item</a>
 				</li>
-				<li>
+				<li class="nav-list__item">
 					<a href="#">Nav item</a>
 				</li>
 			</ul>
-		</div>
+		</nav>
 
-		<div class="main">
-			<p>Page content</p>
+		<div class="nav__content-section">
+			<main id="maincontent" class="main" role="main">
+				<p>Page content</p>
+			</main>
+
+			<aside class="sidebar" role="complementary">
+				<p>Page sidebar</p>
+			</aside>
+
+			<footer id="footer" class="footer" role="contentinfo">
+				<p>Page footer</p>
+			</footer>
 		</div>
 	</div>
 
