@@ -1,19 +1,6 @@
 // Variables
 $breakpoint-one: 480px, 'no-query' true;
 
-// Fonts
-
-@font-face {
-	font-family: "icons";
-		src: url("fonts/icomoon.eot");
-		src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"), 
-			 url("fonts/icomoon.svg#icomoon") format("svg"), 
-			 url("fonts/icomoon.woff") format("woff"), 
-			 url("fonts/icomoon.ttf") format("truetype");
-	font-style: normal;
-	font-weight: normal;
-}
-
 // Simple reset and page set up
 body, html {
 	height: 100%;
@@ -32,48 +19,31 @@ p, ul {
 	box-sizing: border-box;
 }
 
+h1, h2 {
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+
 .wrapper {
 	overflow-x: hidden; // hide content when nudged to left or right
 	width: 100%;
 	position: relative;
 	height: 100%;
 }
-.header {
+.js .header {
 	min-height: 2.5em;
 }
 @include breakpoint($breakpoint-one) {
-	.header {
+	.js .header {
 		min-height: 0;
 	}
 }
 .main {
-	width: 100%;
-	position: relative;
-	top: 0;
-	padding: 0.5em;
-	-webkit-transition: left .5s;
-	transition: left .5s;
 	p {
 		margin-bottom: 800px; // test long page content
 	}
 	&:after {
 		content: "bottom of page";		
-	}
-	&.nav-active {
-		left: 85%;	
-	}
-}
-@include breakpoint($breakpoint-one) {
-	.main {
-		top: 0;		
-		-webkit-transition: left 0;
-		transition: left 0;
-		&.nav-active {
-			left: 0;
-		}
-	}
-	.main, .header {
-		position: relative;
-		height: auto;
 	}
 }
