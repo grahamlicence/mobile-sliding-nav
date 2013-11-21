@@ -1,0 +1,32 @@
+.wrapper {
+	overflow-x: hidden; // hide content when nudged to left or right
+	width: 100%;
+	position: relative;
+	height: 100%;
+}
+.header {
+	min-height: 2.5em;
+	padding-left: 45px;
+	padding-top: 10px;
+}
+@include breakpoint($breakpoint-one) {
+	.header {
+		min-height: 0;
+		padding-left: 0.5em;
+	}
+}
+.main {
+	padding: 0.5em;
+	p:last-child {
+		margin-bottom: 800px; // test long page content
+	}
+	&:after {
+		content: "bottom of page";		
+	}
+}
+.sidebar {
+	padding: 0.5em;	
+}
+.footer {
+	padding: 0.5em;	
+}

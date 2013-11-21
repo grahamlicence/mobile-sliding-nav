@@ -76,6 +76,16 @@
 .nav-list {
 	border-top: solid 1px #666;
 	list-style: none;
+	.js & {
+		visibility: hidden;
+	}
+}
+.nav-open {	
+	.nav-list {
+		.js & {
+			visibility: visible;
+		}
+	}
 }
 .nav-list__item {
 	border-bottom: solid 1px #666;
@@ -137,7 +147,7 @@
 
 // navigation content
 @include breakpoint($breakpoint-one) {
-	.nav__heading {
+	.nav-list__heading {
 		display: none;
 	}
 }
