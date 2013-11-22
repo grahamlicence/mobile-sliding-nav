@@ -174,6 +174,9 @@
 }
 
 // navigation content
+.nav-list__heading {
+	padding-left: 0.5em;
+}
 @include breakpoint($breakpoint-one) {
 	.nav-list__heading {
 		display: none;
